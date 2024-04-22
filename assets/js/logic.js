@@ -14,7 +14,7 @@ let ApiSearch = function(){
     const humidityEl = $("#humidity");
     const weatherEl = $("#weather");
 
-    const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=${apiKey}&units=imperial`;
+    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=${apiKey}&units=imperial`;
     fetch(queryURL)
     .then(function (response){
         if (response.ok){
@@ -56,7 +56,7 @@ let forecastSearch = function(){
     let cityVal = cityInput.val();
     const forecastDays = [$("#day1"), $("#day2"), $("#day3"), $("#day4"), $("#day5")];
 
-    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cityVal}&appid=${apiKey}&units=imperial`;
+    const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityVal}&appid=${apiKey}&units=imperial`;
     fetch(queryURL)
     .then(function (response){
         if (response.ok){
